@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Student Attendance | Attendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body data-dashboard="student" data-staff-role="student">
+  <header class="topbar"><a class="app-brand" href="index.html"><span class="brand-icon">✓</span> attendly<span>.</span></a><div class="account"><span class="account-role">STUDENT</span><span class="account-name" data-user-name></span><button class="logout-button" type="button" data-logout>Sign out</button></div></header>
+  <main class="dashboard-main">
+    <div class="page-intro"><div><span class="eyebrow">YOUR DAILY CHECK-IN</span><h1>Good to see you, <span data-first-name>student</span>.</h1><p>One quick check-in keeps your attendance up to date.</p></div><div class="date-pill"><span aria-hidden="true">◷</span><time data-today></time></div></div>
+    <section class="student-grid">
+      <article class="checkin-card">
+        <div class="card-symbol student-symbol" aria-hidden="true">✓</div><span class="eyebrow">TODAY'S ATTENDANCE</span><h2 id="checkin-title">Ready to check in?</h2><p id="checkin-description">Confirm that you are here for class today.</p>
+        <button class="checkin-button" id="checkin-button" type="button"><span aria-hidden="true">✓</span> Mark me present</button>
+        <div class="checkin-note" id="checkin-note">Your check-in is saved for today only.</div>
+      </article>
+      <article class="stat-card"><div class="stat-top"><span class="eyebrow">YOUR ATTENDANCE</span><span class="stat-icon purple">▦</span></div><div class="stat-value" id="student-present-count">0</div><p>days marked present</p><div class="stat-foot" id="student-stats-foot">Your attendance history starts today.</div></article>
+      <article class="info-card"><div class="info-icon">✦</div><h3>Showing up adds up.</h3><p>Remember to check in each day you attend. If you miss a check-in, your school will see you as absent for that day.</p><div class="info-rule"></div><div class="info-small">Attendance is recorded using your school account.</div></article>
+    </section>
+    <section class="history-card"><div class="section-heading"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>Your check-ins</h2></div><span class="live-label"><i></i> Live</span></div><div class="history-list" id="student-history"></div></section>
+    <p class="demo-disclaimer">Your attendance is saved securely to your school's database.</p>
+  </main>
+</body>
+</html>

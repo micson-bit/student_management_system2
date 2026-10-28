@@ -1,0 +1,12 @@
+{
+  "name": "attendly-attendance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Attendly student attendance application with SQLite persistence",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

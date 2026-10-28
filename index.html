@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Sign in or create an account for Attendly, a student attendance management system.">
+  <title>Welcome to Attendly | Student Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="welcome-panel" aria-label="Attendly introduction">
+      <a class="brand" href="#home" aria-label="Attendly home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 4.5h16a2 2 0 0 1 2 2v19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-19a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2"/><path d="M11 10h10M11 15h4m3 0h3m-10 5h4m3 0h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m11 24 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>attendly<span class="brand-dot">.</span></span>
+      </a>
+
+      <div class="welcome-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUS, IN SYNC</span>
+        <h1>Every day<br>counts<span class="accent">.</span></h1>
+        <p>A simpler way to show up, stay on track, and make every class count.</p>
+      </div>
+
+      <div class="attendance-card" aria-label="Illustration of a weekly attendance overview">
+        <div class="card-topline"><div><span class="card-label">THIS WEEK</span><strong>You're on a roll!</strong></div><span class="streak-badge">✦ &nbsp;5 day streak</span></div>
+        <div class="week-days" aria-hidden="true">
+          <div><span>M</span><i class="day-check">✓</i></div><div><span>T</span><i class="day-check">✓</i></div><div><span>W</span><i class="day-check">✓</i></div><div><span>T</span><i class="day-check">✓</i></div><div><span>F</span><i class="day-today">•</i></div><div><span>S</span><i class="day-empty"></i></div><div><span>S</span><i class="day-empty"></i></div>
+        </div>
+        <div class="card-footer"><span class="avatar-stack" aria-hidden="true"><i>A</i><i>J</i><i>M</i></span><span>Join <strong>2,400+</strong> students showing up</span><span class="footer-arrow" aria-hidden="true">↗</span></div>
+      </div>
+
+      <div class="panel-orb orb-one" aria-hidden="true"></div><div class="panel-orb orb-two" aria-hidden="true"></div>
+      <span class="panel-footnote">A little progress, every day.</span>
+    </section>
+
+    <section class="form-panel" aria-label="Account access">
+      <div class="form-wrap">
+        <div class="mobile-brand" aria-hidden="true"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M8 4.5h16a2 2 0 0 1 2 2v19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-19a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2"/><path d="M11 10h10M11 15h4m3 0h3m-10 5h4m3 0h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m11 24 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> attendly<span class="brand-dot">.</span></div>
+        <div class="form-heading"><span class="eyebrow form-eyebrow">LET'S GET YOU IN</span><h2 id="form-title">Welcome back</h2><p id="form-description">Your next class is just a sign in away.</p></div>
+
+        <div class="mode-switch" role="tablist" aria-label="Choose account action">
+          <button class="mode-tab is-active" id="signin-tab" type="button" role="tab" aria-selected="true" aria-controls="account-form" data-mode="signin">Sign in</button>
+          <button class="mode-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="account-form" data-mode="signup">Create account</button>
+        </div>
+
+        <form id="account-form" novalidate>
+          <fieldset class="role-group">
+            <legend>With your school</legend>
+            <p class="role-hint">Choose how you are connected to your school.</p>
+            <div class="role-options" role="radiogroup" aria-label="School role">
+              <label class="role-option role-student is-selected">
+                <input type="radio" name="role" value="student" checked>
+                <span class="role-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M5 20c.6-3.2 3.2-5 7-5s6.4 1.8 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+                <span class="role-name">Student</span><span class="role-check" aria-hidden="true">✓</span>
+              </label>
+              <label class="role-option role-coordinator">
+                <input type="radio" name="role" value="coordinator">
+                <span class="role-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V8l8-4 8 4v11M2.5 19h19M8 19v-5h8v5M8 9h.01M12 9h.01M16 9h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="role-name">Coordinator</span><span class="role-check" aria-hidden="true">✓</span>
+              </label>
+              <label class="role-option role-admin">
+                <input type="radio" name="role" value="administrator">
+                <span class="role-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 19 6v5c0 4.4-2.8 7.8-7 10-4.2-2.2-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="role-name">Administrator</span><span class="role-check" aria-hidden="true">✓</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="field-group is-hidden" id="name-group">
+            <label for="full-name">Full name</label>
+            <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M5 20c.6-3.2 3.2-5 7-5s6.4 1.8 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><input id="full-name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Johnson" minlength="2"></div>
+            <span class="field-error" id="name-error"></span>
+          </div>
+          <div class="field-group">
+            <label for="email">School email</label>
+            <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7 7.5 5.5L19.5 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><input id="email" name="email" type="email" autocomplete="email" placeholder="you@university.edu" required></div>
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="field-group">
+            <div class="label-row"><label for="password">Password</label><button class="text-button" id="forgot-button" type="button">Forgot password?</button></div>
+            <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 4v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="8"><button class="visibility-button" id="toggle-password" type="button" aria-label="Show password" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.8 12s3.2-6 9.2-6 9.2 6 9.2 6-3.2 6-9.2 6-9.2-6-9.2-6Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
+            <span class="field-error" id="password-error"></span>
+          </div>
+          <div class="form-options"><label class="checkbox-label"><input type="checkbox" id="remember"><span class="custom-checkbox" aria-hidden="true"></span><span id="remember-label">Remember me</span></label><span class="secure-note"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.8 13 4v3.4c0 3.2-2.1 5.5-5 6.8-2.9-1.3-5-3.6-5-6.8V4l5-2.2Z" stroke="currentColor" stroke-width="1.3"/><path d="m5.8 8 1.5 1.5L10.5 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Secure &amp; private</span></div>
+          <button class="submit-button" id="submit-button" type="submit"><span id="submit-label">Sign in to your account</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <p class="terms-note is-hidden" id="terms-note">By creating an account, you agree to our <a href="#terms">Terms</a> and <a href="#privacy">Privacy Policy</a>.</p>
+          <div class="form-divider"><span>OR CONTINUE WITH</span></div>
+          <button class="google-button" type="button" id="google-button"><span class="google-g" aria-hidden="true">G</span><span>Continue with Google</span></button>
+        </form>
+        <p class="switch-prompt" id="switch-prompt">New to Attendly? <button class="text-button" type="button" data-mode="signup">Create an account</button></p>
+        <p class="copyright">© 2025 Attendly <span>·</span> Made for showing up.</p>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

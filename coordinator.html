@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f7fb">
+  <title>Coordinator Dashboard | Attendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css"><script src="dashboard.js" defer></script>
+</head>
+<body data-dashboard="staff" data-staff-role="coordinator">
+  <header class="topbar"><a class="app-brand" href="index.html"><span class="brand-icon">✓</span> attendly<span>.</span></a><div class="account"><span class="account-role">COORDINATOR</span><span class="account-name" data-user-name></span><button class="logout-button" type="button" data-logout>Sign out</button></div></header>
+  <main class="dashboard-main">
+    <div class="page-intro"><div><span class="eyebrow">SCHOOL ATTENDANCE</span><h1>Coordinator dashboard</h1><p>Track today's check-ins and keep your student roster up to date.</p></div><div class="date-pill"><span aria-hidden="true">◷</span><time data-today></time></div></div>
+    <section class="staff-checkin"><div><span class="eyebrow">YOUR ATTENDANCE</span><strong id="staff-checkin-status">You have not checked in today.</strong></div><button class="add-button" id="staff-checkin-button" type="button">✓ &nbsp; Mark me present</button></section>
+    <section class="stats-grid"><article class="stat-card"><div class="stat-top"><span class="eyebrow">STUDENTS</span><span class="stat-icon blue">♙</span></div><div class="stat-value" id="total-count">0</div><p>on the student roster</p></article><article class="stat-card"><div class="stat-top"><span class="eyebrow">PRESENT TODAY</span><span class="stat-icon green">✓</span></div><div class="stat-value green-text" id="present-count">0</div><p>students checked in</p></article><article class="stat-card"><div class="stat-top"><span class="eyebrow">ABSENT TODAY</span><span class="stat-icon orange">–</span></div><div class="stat-value orange-text" id="absent-count">0</div><p>no check-in recorded</p></article></section>
+    <section class="roster-card"><div class="section-heading roster-heading"><div><span class="eyebrow">ATTENDANCE OVERVIEW</span><h2>Student roster <span class="roster-date" data-today></span></h2></div><span class="live-label"><i></i> Updates automatically</span></div><div class="roster-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="roster-search" type="search" placeholder="Search students" aria-label="Search students"></label><button class="add-button" id="show-add-student" type="button"><span aria-hidden="true">+</span> Add student</button></div><div class="add-student-form is-hidden" id="add-student-form"><label>Student name<input id="new-student-name" type="text" placeholder="e.g. Alex Johnson"></label><label>School email<input id="new-student-email" type="email" placeholder="alex@school.edu"></label><button class="add-button" id="save-student" type="button">Add to roster</button></div><div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>SCHOOL EMAIL</th><th>JOINED</th><th>PRESENT DAYS</th><th>ABSENT DAYS</th><th>LAST CHECK-IN</th><th>TODAY</th></tr></thead><tbody id="roster-body"></tbody></table></div><div class="empty-state is-hidden" id="empty-state">No students in the roster yet. Add students to start tracking attendance.</div><div class="roster-footer"><span id="roster-summary">0 students</span><span>Days are counted from each student's roster date; no check-in counts as absent.</span></div></section>
+    <p class="demo-disclaimer">Roster and attendance are saved securely to your school's database.</p>
+  </main>
+</body>
+</html>
